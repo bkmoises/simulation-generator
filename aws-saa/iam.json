@@ -1,0 +1,94 @@
+{
+    "domain": "IAM",
+    "questions": [
+        {
+            "question": "What is a proper definition of an IAM Role?",
+            "answers": [
+                "IAM Users in multiple User Groups",
+                "An IAM entity that defines a password policy for IAM Users",
+                "An IAM entity that defines a set of permissions for making requests to AWS services, and will be used by an AWS service",
+                "Permissions assigned to IAM Users to perform actions"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which of the following is an IAM Security Tool?",
+            "answers": [
+                "IAM Credentials Report",
+                "IAM Root Account Manager",
+                "IAM Services Report",
+                "IAM Security Advisor"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which answer is INCORRECT regarding IAM Users?",
+            "answers": [
+                "IAM Users can belong to multiple User Groups",
+                "IAM Users don't have to belong to a User Group",
+                "IAM Policies can be attached directly to IAM Users",
+                "IAM Users access AWS services using root account credentials"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which of the following is an IAM best practice?",
+            "answers": [
+                "Create several IAM Users for one physical person",
+                "Don't use the root user account",
+                "Share your AWS account credentials with your colleague, so (s)he can perform a task for you",
+                "Do not enable MFA for easier access"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What are IAM Policies?",
+            "answers": [
+                "A set of policies that defines how AWS accounts interact with each other",
+                "JSON documents that define a set of permissions for making requests to AWS services, and can be used by IAM Users, User Groups, and IAM Roles",
+                "A set of policies that define a password for IAM Users",
+                "A set of policies defined by AWS that show how customers interact with AWS"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which principle should you apply regarding IAM Permissions?",
+            "answers": [
+                "Grant most privilege",
+                "Grant more permissions if your employee asks you to",
+                "Grant least privilege",
+                "Restrict root account permissions"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What should you do to increase your root account security?",
+            "answers": [
+                "Remove permissions from the root account",
+                "Only access AWS services through AWS Command Line Interface (CLI)",
+                "Don't create IAM Users, only access your AWS account using the root account",
+                "Enable Multi-Factor Authentication (MFA)"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "IAM User Groups can contain IAM Users and other User Groups.",
+            "answers": [
+                "True",
+                "False"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "An IAM policy consists of one or more statements. A statement in an IAM Policy consists of the following, EXCEPT:",
+            "answers": [
+                "Effect",
+                "Principal",
+                "Version",
+                "Action",
+                "Resource"
+            ],
+            "answer": 2
+        }
+    ]
+}
