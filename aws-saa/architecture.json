@@ -39,6 +39,35 @@
                 "Create a Golden AMI that contains the dependencies and use that image to launch the EC2 instances"
             ],
             "answer": 2
+        },
+        {
+            "question": "A startup company plans to run its application on AWS. As a solutions architect, the company hired you to design and implement a fully Serverless REST API. Which technology stack do you recommend?",
+            "answers": [
+                "API Gateway + AWS Lambda",
+                "Application Load Balancer + EC2",
+                "Elastic Container Service (ECS) + Elastic Block Store (EBS)",
+                "Amazon CloudFront + S3"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "The following AWS services have an out of the box caching feature, EXCEPT",
+            "answers": [
+                "API Gateway",
+                "Lambda",
+                "DynamoDB"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "You would like to create an architecture for a micro-services application whose sole purpose is to encode videos stored in an S3 bucket and store the encoded videos back into an S3 bucket. You would like to make this micro-services application reliable and has the ability to retry upon failures. Each video may take over 25 minutes to be processed. The services used in the architecture should be asynchronous and should have the capability to be stopped for a day and resume the next day from the videos that haven't been encoded yet. Which of the following AWS services would you recommend in this scenario?",
+            "answers": [
+                "Amazon S3 + AWS Lambda",
+                "Amazon SNS + Amazon EC2",
+                "Amazon SQS + Amazon EC2",
+                "Amazon SQS + AWS Lambda"
+            ],
+            "answer": 2
         }
     ]
 }

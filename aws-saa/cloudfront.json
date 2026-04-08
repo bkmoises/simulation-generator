@@ -1,0 +1,73 @@
+{
+    "domain": "CloudFront",
+    "questions": [
+        {
+            "question": "You have a CloudFront Distribution that serves your website hosted on a fleet of EC2 instances behind an Application Load Balancer. All your clients are from the United States, but you found that some malicious requests are coming from other countries. What should you do to only allow users from the US and block other countries?",
+            "answers": [
+                "Use CloudFront Geo Restriction",
+                "Use Origin Access Control",
+                "Set up a security group and attach it to your CloudFront Distribution",
+                "Use a Route 53 Latency record and attach it to CloudFront"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What does this S3 bucket policy do?",
+            "code_snippet": "{\n    \"Version\": \"2012-10-17\",\n    \"Id\": \"Mystery policy\",\n    \"Statement\": [{\n        \"Sid\": \"What could it be?\",\n        \"Effect\": \"Allow\",\n        \"Principal\": {\n            \"Service\": \"cloudfront.amazonaws.com\"\n        },\n        \"Action\": \"s3:GetObject\",\n        \"Resource\": \"arn:aws:s3:::examplebucket/*\",\n        \"Condition\": {\n            \"StringEquals\": {\n                \"AWS:SourceArn\": \"arn:aws:cloudfront::123456789012:distribution/EDFVDVBD6EXAMPLE\"\n            }\n        }\n    }]\n}",
+            "answers": [
+                "Forces GetObject request to be encrypted if coming from CloudFront",
+                "Only allows the S3 bucket content to be accessed from your CloudFront Distribution",
+                "Only allows GetObject type of request on the S3 bucket from anybody"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "You have a static website hosted on an S3 bucket. You have created a CloudFront Distribution that points to your S3 bucket to better serve your requests and improve performance. After a while, you noticed that users can still access your website directly from the S3 bucket. You want to enforce users to access the website only through CloudFront. How would you achieve that?",
+            "answers": [
+                "Send an email to your clients and tell them to not use the S3 endpoint",
+                "Configure your CloudFront Distribution and create an Origin Access Control (OAC), then update your S3 Bucket Policy to only accept requests from your CloudFront Distribution.",
+                "Use S3 Access Points to redirect clients to CloudFront"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "A WordPress website is hosted in a set of EC2 instances in an EC2 Auto Scaling Group and fronted by a CloudFront Distribution which is configured to cache the content for 3 days. You have released a new version of the website and want to release it immediately to production without waiting for 3 days for the cached content to be expired. What is the easiest and most efficient way to solve this?",
+            "answers": [
+                "Open a support ticket with AWS Support to remove the CloudFront Cache",
+                "CloudFront Cache Invalidation",
+                "EC2 Cache Invalidation"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "A company is migrating a web application to AWS Cloud and they are going to use a set of EC2 instances in an EC2 Auto Scaling Group. The web application is made of multiple components so they will need a host-based routing feature to route to specific web application components. This web application is used by many customers and therefore the web application must have a static IP address so it can be whitelisted by the customers’ firewalls. As the customers are distributed around the world, the web application must also provide low latency to all customers. Which AWS service can help you to assign a static IP address and provide low latency across the globe?",
+            "answers": [
+                "AWS Global Accelerator + Application Load Balancer",
+                "Amazon CloudFront",
+                "Network Load Balancer",
+                "Application Load Balancer"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "You have a lot of static files stored in an S3 bucket that you want to distribute globally to your users. Which AWS service should you use?",
+            "answers": [
+                "S3 Cross-Region Replication",
+                "Amazon CloudFront",
+                "Amazon Route 53",
+                "API Gateway"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "You are running a photo-sharing website where your images are downloaded from all over the world. Every month you publish a master pack of beautiful mountain images that are over 15 GB in size. The content is currently hosted on an Elastic File System (EFS) file system and distributed by an Application Load Balancer and a set of EC2 instances. Each month, you are experiencing very high traffic which increases the load on your EC2 instances and increases network costs. What do you recommend to reduce EC2 load and network costs without refactoring your website?",
+            "answers": [
+                "Hosts the master pack into S3",
+                "Enable Application Load Balancer Caching",
+                "Scale up the EC2 instances",
+                "Create a CloudFront Distribution"
+            ],
+            "answer": 3
+        }
+    ]
+}
